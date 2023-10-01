@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "luwygraphql",
   "main": "index.js",
+  "engines": {
+    "node": "15.14.0"
+  },
   "scripts": {
-    "start": "node .",
+    "start": "node index.js",
     "dev": "nodemon ."
   },
   "keywords": [
