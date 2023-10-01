@@ -36,6 +36,12 @@ const server = new ApolloServer ({
 
 
 //Inicia el seridor
-server.listen({port: process.env.PORT || 4000}).then(({url}) =>{
-    console.log(`Servidor listo en la URL ${url}`);
-} )
+// server.listen({port: process.env.PORT || 4000}).then(({url}) =>{
+//     console.log(`Servidor listo en la URL ${url}`);
+// } )
+
+const port = Number.parseInt(process.env.PORT) || 4000;
+
+const { url } = await startStandaloneServer(server, { listen: { port } });
+
+console.log(`🚀 Server listening at: ${url}`);
